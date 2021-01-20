@@ -1,0 +1,57 @@
+let rect = [];
+
+function setup(){
+  createcanvas(500,500);
+  background(255);
+  stroke(255,0,0);
+  let x = random(position1);
+  let y = random(position2);
+  let rectangle = new rectangle(x,y);
+  
+}
+
+
+funcation draw(){
+ rectMode(CENTER);
+ rect1(280,350,200,200);
+ stroke(127,0,0);
+ let c = color('green');
+ stroke(c);
+ rect2(250,110,10,5);
+ let c = color('blue');
+ stoke(c);
+ rect3(400,450,20,5);
+
+
+}
+class rectangle{
+ constructor(x,y){
+ this.x = x;
+ this.y = y;
+}
+
+function mousepressed(){
+ for (let i=0; i<rectangle.length; i++){
+  rectangle[i].clicked(mouseX, mouseY);
+}
+}
+
+clicked(px,py){
+let d= dist(px,py, this.x.this.y)
+if (rect1[100]> rec2[200] && rect2[250]<rect1[280]]
+{
+console.log("CLICKED INSIDE BROWN RECTANGLE");
+ }
+else 
+{
+console.log("CLICKED INSIDE GREEN RECTANGLE");
+}
+if (rect1[100]<rect3[230] && rect3[400]>rect1[280],rect2[250])
+{
+consol.log("CLICKED INSIDE BLUE RECTANGLE");
+}
+else
+{
+console.log("CLICKED INSIDE RED RECTANGLE");
+}
+}
